@@ -1,0 +1,1 @@
+窗口循环，通过ctrl+tab /ctrl+shift+tab实现快速循环笔记窗口。
