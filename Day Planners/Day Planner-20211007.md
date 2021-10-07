@@ -2,7 +2,7 @@
 gantt
     dateFormat  HH-mm
     axisFormat %H:%M
-    %% Current Time: 下午9:44:05
+    %% Current Time: 下午9:45:59
     section Tasks
     准备去上第一节课，八点四十上课     :08-30, 55mm
     下课     :09-25, 55mm
