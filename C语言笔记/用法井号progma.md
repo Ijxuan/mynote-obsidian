@@ -9,7 +9,7 @@
 #endif // HEADER_H_  
 
 
-![[未命名/#pragma的常用方法讲解.pdf]]
+![[pragma的常用方法讲解.pdf]]
 引用：
 
 ![[未命名/#pragma的常用方法讲解_YoungYangD的博客-CSDN博客_#pragma.html]]
