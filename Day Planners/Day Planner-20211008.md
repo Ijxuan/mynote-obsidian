@@ -2,7 +2,7 @@
 gantt
     dateFormat  HH-mm
     axisFormat %H:%M
-    %% Current Time: 下午7:58:39
+    %% Current Time: 下午8:08:39
     section Tasks
     准备去上第一节课，八点四十上课     :08-30, 55mm
     下课     :09-25, 55mm
@@ -54,7 +54,7 @@ gantt
 - [x] 15:45 。
 - [x] 16:30 。。。
 - [x] 17:20 。。。。
-- [ ] 18:00 BREAK
+- [x] 18:00 BREAK
 我利用这段时间回顾当天早些时候做过的事情，完成第二天的任务。
 
 ### 晚上的计划
