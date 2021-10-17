@@ -1,9 +1,46 @@
+事后总结：
+`#define tskIDLE_PRIORITY			( ( UBaseType_t ) 0U )
+`
+ tskIDLE_PRIORITY	=0
+然后
+typedef enum  {
+  osPriorityIdle          = -3,               
+  osPriorityLow           = -2,             
+  osPriorityBelowNormal   = -1,              
+  osPriorityNormal        =  0,                
+  osPriorityAboveNormal   = +1,        
+  osPriorityHigh          = +2,     
+  osPriorityRealtime      = +3,     
+  osPriorityError         =  0x84    
+ thread has illegal priority
+} osPriority;
+==重点是最低优先级== 
+osPriorityIdle        = -3,         
+然后是把cubeMX定义的优先级转化成FREERTOS的优先级
+是这个函数：
+`static unsigned portBASE_TYPE makeFreeRtosPriority (osPriority priority)
+{
+  unsigned portBASE_TYPE fpriority = tskIDLE_PRIORITY;
+  
+  if (priority != osPriorityError) {
+    fpriority += (priority - osPriorityIdle);
+  }
+  
+  return fpriority;
+}`
+意思是只要进来的不是osPriorityError，就处理一下
+（因为osPriorityError=  0x84，已经是最大了，就不用处理）
+怎么处理？：
+最终输出的优先级fpriority += (priority - osPriorityIdle);
+也就是
+fpriority =fpriority+(priority - osPriorityIdle);
+                      0            ru'ko
 只有这几个优先级了
 
 
 ![[Pasted image 20211017155025.png]]
 ![[Pasted image 20211017155206.png]]
-
+![[Pasted image 20211017165143.png]]
 
 这个问题已经过去很久了。但我还是写一下答案吧。有机会自己写一篇。  
 在cmsis-rtos v1中是通过下面这个函数来转化优先级的：  
