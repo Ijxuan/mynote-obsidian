@@ -53,6 +53,14 @@ cubeMX能设置的优先级最高是6
 一个小小的优先级，代码实现上有这么多弯弯绕绕，因为用了cubeMX所以变复杂了一点，注意前面的推导建立在
 #define tskIDLE_PRIORITY			( ( UBaseType_t ) 0U )
 的基础上
+也就是
+空闲任务（idle task）的优先级为0（tskIDLE_PRIORITY）
+
+巧妙！
+---------------------------
+
+
+
 
 只有这几个优先级了  
 
