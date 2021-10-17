@@ -34,8 +34,27 @@ osPriorityIdle        = -3,
 最终输出的优先级fpriority += (priority - osPriorityIdle);
 也就是
 fpriority =fpriority+(priority - osPriorityIdle);
-                      0            ru'ko
-只有这几个优先级了
+                      0          入口值            -3
+就这样，举例子：
+入口值是osPriorityIdle
+出口值就是0       -3     -（-3）=0
+                        这无疑是最低优先级		
+						
+入口值是osPriorityNormal
+出口值就是0       0    -（-3）=3		 
+                   Normal，表面上是0，其实是3
+				   
+入口值是osPriorityRealtime
+出口值就是0       +3    -（-3）=6	
+
+cubeMX能设置的优先级最高是6
+最低是0
+
+一个小小的优先级，代码实现上有这么多弯弯绕绕，因为用了cubeMX所以变复杂了一点，注意前面的推导建立在
+#define tskIDLE_PRIORITY			( ( UBaseType_t ) 0U )
+的基础上
+
+只有这几个优先级了  
 
 
 ![[Pasted image 20211017155025.png]]
