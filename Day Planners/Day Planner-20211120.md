@@ -3,7 +3,7 @@
 gantt
     dateFormat  HH-mm
     axisFormat %H:%M
-    %% Current Time: 下午3:07:42
+    %% Current Time: 下午3:27:42
     section Tasks
     写PID阶跃的笔记     :15-00, 40mm
     更新pitch轴限位的代码     :15-40, 50mm
